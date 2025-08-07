@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Naverimg from "../src/assets/btnG_완성형.png";
 
 // 전체 레이아웃과 스타일을 담당하는 컨테이너
 const Container = styled.div`
@@ -335,11 +334,11 @@ const LoginPage = () => {
   };
 
   // 🔹 네이버 로그인 함수 (테스트용)
-  const handleNaverLogin = () => {
-    // 🔹 테스트용 임시 네이버 로그인 (백엔드 작업 전까지 사용)
-    localStorage.setItem("token", "naver-test-token-12345");
-    alert("네이버 로그인 되었습니다.");
-    navigate("/");
+  // const handleNaverLogin = () => {
+  //   // 🔹 테스트용 임시 네이버 로그인 (백엔드 작업 전까지 사용)
+  //   localStorage.setItem("token", "naver-test-token-12345");
+  //   alert("네이버 로그인 되었습니다.");
+  //   navigate("/");
 
     /* 🔹 실제 네이버 로그인 코드 (백엔드 작업 시 주석 해제)
     const clientId = import.meta.env.VITE_NAVER_CLIENT_ID;
@@ -350,7 +349,7 @@ const LoginPage = () => {
 
     window.location.href = naverURL;
     */
-  };
+  // };
 
   // 로그인 화면 UI 구성
   return (

@@ -6,7 +6,6 @@ import EntryPage from "./WordPage/EntryPage";
 import SignupPage from "../UserPage/SignupPage";
 import UserProfilePage from "../UserPage/UserProfilePage";
 import GlobalStyle from "./components/GlobalStyle";
-import NaverCallback from "../UserPage/components/NaverCallback";
 import ProtectedLogin from "../UserPage/components/ProtectedLogin";
 import LikeListPage from "../UserPage/LikeListPage";
 import RecentQuizzesPage from "../UserPage/RecentQuizzesPage";
@@ -66,7 +65,6 @@ function App() {
             />
           </Route>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/login/naver" element={<NaverCallback />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </BrowserRouter>
