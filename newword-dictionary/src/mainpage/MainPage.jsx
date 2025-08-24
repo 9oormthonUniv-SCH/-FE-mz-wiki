@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import TagList from "./components/TagList";
-import EntryList from "./components/EntryList";
+import NoticeCard from "./components/NoticeCard";
+import SlangListPage from "./components/SlangListPage";
 import DailyQuizModal from "../components/DailyQuizModal";
 
 const MainPage = () => {
-  const [selectedTag, setSelectedTag] = useState("유행어");
   const [showQuizModal, setShowQuizModal] = useState(false);
 
   useEffect(() => {
@@ -38,8 +37,8 @@ const MainPage = () => {
 
   return (
     <div>
-      <TagList onSelectTag={setSelectedTag} />
-      {selectedTag && <EntryList tag={selectedTag} />}
+      <NoticeCard />
+      <SlangListPage />
       
       {showQuizModal && (
         <DailyQuizModal onClose={handleCloseQuiz} />

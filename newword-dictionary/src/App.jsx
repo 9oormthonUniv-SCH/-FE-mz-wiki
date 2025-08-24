@@ -2,16 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "../UserPage/LoginPage";
 import Layout from "./layout/Layout";
 import MainPage from "./mainpage/MainPage";
-import EntryPage from "./WordPage/EntryPage";
-import SignupPage from "../UserPage/SignupPage";
-import UserProfilePage from "../UserPage/UserProfilePage";
+import SlangEntryPage from "./SlangPage/SlangEntryPage/SlangEntryPage";
+import SignUpPage from "../UserPage/SignUpPage/SignupPage";
+import UserProfilePage from "../UserPage/UserProfilePage/UserProfilePage";
 import GlobalStyle from "./components/GlobalStyle";
 import ProtectedLogin from "../UserPage/components/ProtectedLogin";
-import LikeListPage from "../UserPage/LikeListPage";
-import RecentQuizzesPage from "../UserPage/RecentQuizzesPage";
-import SlangCreatePage from "./WordPage/SlangCreatePage";
-import SlangManagePage from "./WordPage/SlangManagePage";
-import SearchPage from "./components/SearchPage";
+import LikedSlangsPage from "../UserPage/LikeListPage/LikedSlangsPage";
+import RecentQuizzesPage from "../UserPage/RecentQuizzesPage/RecentQuizzesPage";
+import SlangCreatePage from "./SlangPage/SlangCreatePage/SlangCreatePage";
+import SlangManagePage from "./SlangPage/SlangManagePage/SlangManagePage";
+import SearchPage from "./components/SearchResults/SearchPage";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<MainPage />} />
             <Route path="/search" element={<SearchPage />} />
-            <Route path="/slangs/:id" element={<EntryPage />} />
+            <Route path="/slangs/:id" element={<SlangEntryPage />} />
             <Route
               path="/user"
               element={
@@ -43,7 +43,7 @@ function App() {
               path="/user/liked"
               element={
                 <ProtectedLogin>
-                  <LikeListPage />
+                  <LikedSlangsPage />
                 </ProtectedLogin>
               }
             />
@@ -65,7 +65,7 @@ function App() {
             />
           </Route>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Routes>
       </BrowserRouter>
     </>
